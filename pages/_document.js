@@ -1,5 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import '../styles/index.css'
 
 export default class extends Document {
   render () {
