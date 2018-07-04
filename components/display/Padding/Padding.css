@@ -1,0 +1,19 @@
+.extra-small {
+  padding: 0.25em;
+}
+
+.small {
+  padding: 0.5em;
+}
+
+.medium {
+  padding: 1em;
+}
+
+.large {
+  padding: 2em;
+}
+
+.extra-large {
+  padding: 4em;
+}
