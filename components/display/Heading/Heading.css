@@ -1,0 +1,44 @@
+.root {
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+}
+
+.h1, .h2 {
+  line-height: 1.4em;
+}
+
+.h3, .h4, .h5, .h6 {
+  line-height: 1.5em;
+}
+
+.h1 {
+  font-size: responsive 2em 2.8em; /* min-size, max-size */
+  font-range: 32em 80em;
+}
+
+.h2 {
+  font-size: responsive 1.7em 2.1em; /* min-size, max-size */
+  font-range: 32em 80em;
+}
+
+.h3 {
+  font-size: responsive 1.4em 1.8em; /* min-size, max-size */
+  font-range: 32em 80em;
+}
+
+.h4 {
+  font-size: responsive 1.3em 1.6em; /* min-size, max-size */
+  font-range: 32em 80em;
+}
+
+.h5 {
+  font-size: responsive 1.2em 1.4em; /* min-size, max-size */
+  font-range: 32em 80em;
+}
+
+.h6 {
+  font-size: responsive 1.1em 1.2em; /* min-size, max-size */
+  font-range: 32em 80em;
+}

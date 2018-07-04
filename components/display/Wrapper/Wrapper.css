@@ -1,0 +1,23 @@
+.root {
+  margin: 0 auto;
+}
+
+.extra-small {
+  max-width: 32em;
+}
+
+.small {
+  max-width: 40em;
+}
+
+.medium {
+  max-width: 52em
+}
+
+.large {
+  max-width: 64em;
+}
+
+.extra-large {
+  max-width: 80em;
+}
