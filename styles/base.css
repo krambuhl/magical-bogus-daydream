@@ -1,3 +1,5 @@
+/* @import 'reset-css'; */
+
 html,
 body {
   font-family: system-ui;
@@ -8,4 +10,15 @@ body {
   font-size: responsive 1.1em 1.4em; /* min-size, max-size */
   font-range: 32em 80em;
   line-height: 1.35em;
+}
+
+
+:global(.specimen) {
+  border: 1px solid #ccc;
+}
+
+:global(.component) {
+  border-top: 4px solid #444;
+  margin-top:  2em;
+  padding-top: 1em;
 }

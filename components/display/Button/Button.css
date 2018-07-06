@@ -1,0 +1,20 @@
+.root {
+  appearance: none;
+  border: none;
+}
+
+.primary {
+  background-color: blue;
+}
+
+.secondary {
+  background-color: grey;
+}
+
+.positive {
+  background-color: green;
+}
+
+.negative {
+  background-color: red;
+}
