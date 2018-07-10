@@ -1,4 +1,4 @@
-import { NavList, ReadmeViewer } from '@styleguide'
+import { MastHead, ReadmeViewer } from '@styleguide'
 import css from './Catalog.css'
 
 export default ({ files }) => {
@@ -10,7 +10,7 @@ export default ({ files }) => {
 
   return (
     <div className={css.root}>
-      <NavList fileList={fileList} />
+      <MastHead fileList={fileList} />
       <ReadmeViewer fileList={fileList} />
     </div>
   )

@@ -5,7 +5,7 @@ const config = {
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: "[name]-[hash:4]-[local]",
+    localIdentName: "[name]-[local]",
   },
   pageExtensions: ['js', 'jsx', 'mdx'],
   webpack: config => {

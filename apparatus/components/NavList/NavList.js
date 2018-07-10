@@ -9,9 +9,9 @@ class NavList extends React.Component {
     isExpanded: false
   }
 
-  toggle () {
+  toggle (state) {
     this.setState({
-      isExpanded: !this.state.isExpanded
+      isExpanded: state !== undefined ? state : !this.state.isExpanded
     })
   }
 
@@ -20,27 +20,39 @@ class NavList extends React.Component {
     const { isExpanded } = this.state
 
     return (
-      <nav className={joinClass(css.root, isExpanded && css.expanded)}>
+      <nav ref={this.$el} className={joinClass(css.root, isExpanded && css.expanded)}>
         <button
           className={css.toggle}
-          onClick={ev => this.toggle(ev)}
+          onClick={ev => this.toggle()}
         >
           Menu
         </button>
 
-        <ul className={css.list}>
-          {
-            fileList.map(({ key }) => (
-              <li className={css.item} key={key} >
-                <Link href={`/styleguide?selected=${key}`}>
-                  <a className={css.link}>
-                    { capitalize(key).split('/').join(' / ') }
-                  </a>
-                </Link>
-              </li>
-            ))
-          }
-        </ul>
+        <div className={css.content}>
+          <button
+            className={css.close}
+            onClick={ev => this.toggle(false)}
+          >
+            Close
+          </button>
+
+          <ul className={css.list}>
+            {
+              fileList.map(({ key }) => (
+                <li className={css.item} key={key} >
+                  <Link href={`?selected=${key}`}>
+                    <a
+                      className={css.link}
+                      onClick={ev => this.toggle(false)}
+                    >
+                      { capitalize(key).split('/').join(' / ') }
+                    </a>
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </nav>
     )
   }

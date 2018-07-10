@@ -2,6 +2,50 @@
 
 .readme {
   display: none;
+  padding: 2em;
+
+  & > * > * {
+    margin: 0 auto;
+    max-width: 1280px;
+
+    & + * {
+      margin-top: 1em;
+    }
+  }
+
+
+  h1:not([class]),
+  h2:not([class]),
+  h3:not([class]),
+  h4:not([class]),
+  h5:not([class]),
+  h6:not([class]) {
+    line-height: 1em;
+    font-weight: bold;
+  }
+
+  h1:not([class]) { font-size: 2em; }
+  h2:not([class]) { font-size: 1.8em; }
+  h3:not([class]) { font-size: 1.5em; }
+  h4:not([class]) { font-size: 1.25em; }
+  h5:not([class]) { font-size: 1.1em; }
+  h6:not([class]) { font-size: 1.0em; }
+
+  ul:not([class]) { list-style-type: disc; }
+  ol:not([class]) { list-style-type: decimal; }
+
+  a {
+    color: blue;
+
+    &:focus {
+      outline: 1px dotted blue;
+    }
+
+    &:hover {
+      background-color: blue;
+      color: white;
+    }
+  }
 }
 
 .readme[aria-hidden="false"] {

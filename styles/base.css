@@ -1,15 +1,17 @@
-/* @import 'reset-css'; */
+@import 'reset-css';
 
 html,
 body {
   font-family: system-ui;
   font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: responsive 1.1em 1.4em; /* min-size, max-size */
   font-range: 32em 80em;
-  line-height: 1.35em;
+  line-height: 1.5em;
 }
 
 

@@ -27,6 +27,7 @@ export default class Specimen extends React.Component {
     super(props)
     const optionList = props.options ? processOptions(props.options) : []
     this.state = {
+      isFullScreen: false,
       optionList,
       selectedOptions: Object.assign(getDefaultOptions(optionList), props.defaultOptions)
     }
@@ -40,17 +41,23 @@ export default class Specimen extends React.Component {
     })
   }
 
+  toggleFullScreen (state) {
+    this.setState({
+      isFullScreen: state !== undefined ? state : !this.state.isFullScreen
+    })
+  }
+
   render () {
     const { options, className, children } = this.props
-    const { optionList } = this.state
+    const { optionList, isFullScreen } = this.state
     const childrenRender = options ? children(this.state.selectedOptions) : children
 
     return (
-      <div className={joinClass(css.root, className)}>
+      <div className={joinClass(css.root, isFullScreen && css.fullScreen, className)}>
         <nav className={css.nav}>
           { optionList.map(({ propName, options }) => (
             <div className={css.field} key={propName}>
-              <label>{propName}</label>
+              <label className={css.label}>{propName}</label>
               <div className={css.selectWrapper}>
                 <select
                   className={css.select}
@@ -70,6 +77,15 @@ export default class Specimen extends React.Component {
 
         <div className={css.render}>
           {childrenRender}
+        </div>
+
+        <div className={css.actions}>
+          <button
+          className={css.button}
+          onClick={() => this.toggleFullScreen()}
+          >
+          Full Screen
+          </button>
         </div>
       </div>
     )
