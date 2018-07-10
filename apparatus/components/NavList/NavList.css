@@ -1,0 +1,21 @@
+.root {
+
+}
+
+.expanded {
+  & .list {
+    background-color: red;
+  }
+}
+
+.list {
+
+}
+
+.item {
+
+}
+
+.link {
+
+}

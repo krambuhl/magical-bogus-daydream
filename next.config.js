@@ -5,12 +5,13 @@ const config = {
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: "[name]-[local]",
+    localIdentName: "[name]-[hash:4]-[local]",
   },
   pageExtensions: ['js', 'jsx', 'mdx'],
   webpack: config => {
     config.resolve.extensions.push('.mdx')
     config.resolve.alias = {
+      "@styleguide": "./apparatus",
       '@components': './components',
       '@components/container': './components/container/index.js',
       '@components/display': './components/display/index.js',

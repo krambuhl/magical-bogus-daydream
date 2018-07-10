@@ -1,4 +1,4 @@
-const { requireAll } = require('@lib/file-helpers')
-
-// requires and returns all modules that match
-module.exports = requireAll(require.context('./', true, /(\w+)\/\1\.(js|mdx)$/))
+export { default as Button } from './Button/Button'
+export { default as Heading } from './Heading/Heading'
+export { default as Padding } from './Padding/Padding'
+export { default as Wrapper } from './Wrapper/Wrapper'

@@ -6,9 +6,10 @@
       {
         "root": ["./"],
         "alias": {
+          "@styleguide": "./apparatus",
           "@components": "./components",
-          "@components/container": "./components/container/index.js",
-          "@components/display": "./components/display/index.js",
+          "@components/container": "./components/container",
+          "@components/display": "./components/display",
           "@lib": "./lib",
           "@page": "./pages/index.js",
           "@static": "./static"

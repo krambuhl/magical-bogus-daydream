@@ -1,0 +1,10 @@
+.root {}
+
+
+.component {
+  display: none;
+}
+
+.component:target {
+  display: block;
+}

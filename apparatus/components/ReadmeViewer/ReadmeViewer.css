@@ -1,0 +1,9 @@
+.root {}
+
+.readme {
+  display: none;
+}
+
+.readme[aria-hidden="false"] {
+  display: block;
+}
