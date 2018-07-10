@@ -13,14 +13,3 @@ body {
   font-range: 32em 80em;
   line-height: 1.5em;
 }
-
-
-:global(.specimen) {
-  border: 1px solid #ccc;
-}
-
-:global(.component) {
-  border-top: 6px solid black;
-  margin-top:  3em;
-  padding-top: 2em;
-}

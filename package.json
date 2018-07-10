@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node ./server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.13.0-0",

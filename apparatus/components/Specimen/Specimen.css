@@ -26,6 +26,7 @@
   display: flex;
   flex-flow: row wrap;
   background-color: #eee;
+  padding-right: 7em;
 }
 
 .actions {
@@ -34,7 +35,7 @@
 
 .button {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   border: 1px solid #eee;
   background-color: #eee;
@@ -80,6 +81,7 @@
 }
 
 .select {
+  -webkit-appearance: none;
   appearance: none;
   padding: 0.5em;
   font-size: 1rem;
