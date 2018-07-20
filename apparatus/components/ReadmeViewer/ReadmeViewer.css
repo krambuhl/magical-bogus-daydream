@@ -1,7 +1,4 @@
-.root {}
-
-.readme {
-  display: none;
+.root {
   padding: 2em;
 
   & > * > * {
@@ -13,6 +10,9 @@
     }
   }
 
+  em:not([class]) {
+    font-style: italic;
+  }
 
   h1:not([class]),
   h2:not([class]),
@@ -31,23 +31,22 @@
   h5:not([class]) { font-size: 1.1em; }
   h6:not([class]) { font-size: 1.0em; }
 
-  ul:not([class]) { list-style-type: disc; }
-  ol:not([class]) { list-style-type: decimal; }
+  ul:not([class]) { list-style: disc inside; }
+  ol:not([class]) { list-style: decimal inside; }
 
-  a {
+  a:not([class]) {
     color: blue;
 
-    &:focus {
-      outline: 1px dotted blue;
-    }
-
+    &:focus,
     &:hover {
       background-color: blue;
       color: white;
     }
-  }
-}
 
-.readme[aria-hidden="false"] {
-  display: block;
+    &:focus {
+      outline: none;
+      box-shadow: blue 0 0 3px;
+    }
+
+  }
 }

@@ -17,11 +17,16 @@
     "@zeit/next-mdx": "^1.1.0",
     "capitalization": "^1.0.0",
     "next": "^6.1.1",
+    "pretty": "^2.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-element-to-jsx-string": "^14.0.1",
+    "react-highlight": "^0.12.0",
+    "react-svg": "^4.1.8",
     "reset-css": "^4.0.1"
   },
   "devDependencies": {
+    "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-module-resolver": "^3.1.1",
     "postcss-nested": "^3.0.0",
     "postcss-preset-env": "^5.2.1",

@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const withCSS = require('@zeit/next-css')
 const withMDX = require('@zeit/next-mdx')
 
@@ -19,6 +20,12 @@ const config = {
       '@page': './pages/index.js',
       '@static': './static'
     }
+    config.plugins.push(
+      new webpack.ContextReplacementPlugin(
+        /highlight\.js\/lib\/languages$/,
+        new RegExp(`^./(javascript|jsx|html)$`)
+      )
+    )
     return config
   }
 }

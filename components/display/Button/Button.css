@@ -2,6 +2,8 @@
   appearance: none;
   border: none;
   color: white;
+  padding: 0.5em;
+  font-size: 1em;
 }
 
 .primary {
@@ -18,4 +20,8 @@
 
 .negative {
   background-color: red;
+}
+
+.isDisabled {
+  opacity: 0.4;
 }

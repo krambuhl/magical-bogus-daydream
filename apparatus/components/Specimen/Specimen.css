@@ -3,94 +3,132 @@
   background-color: white;
 }
 
-.fullScreen {
+.props {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #f1f1f1;
+  padding: 0.25em 0 0.8em 0.8em;
+
+  & > * {
+    margin-right: 0.8em;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 0.75em;
+  background-color: #f6f6f6;
+  text-align: right;
+
+  & > * {
+    display: flex;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1em;
+  padding: 0.65em 1.1em;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+
+  & > * + * {
+    margin-left: 0.5em;
+  }
+
+  &:focus {
+    box-shadow: blue 0 0 3px;
+    outline: 1px solid blue;
+    border-color: blue;
+  }
+
+  &:hover {
+    background-color: blue;
+    fill: white;
+    color: white;
+  }
+
+  &.isActive {
+    border-bottom-color: blue;
+  }
+}
+
+.expandIcon {
+  display: inline-block;
+}
+
+.collapseIcon {
+  display: none;
+}
+
+.expandIcon,
+.collapseIcon {
+  width: 1em;
+  height: 1em;
+}
+
+.render {
+  border: 2px solid #f6f6f6;
+  border-top: none;
+  padding: 0.8em;
+}
+
+.code {
+  code {
+    display: block;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 1em;
+  }
+}
+
+/* variants */
+.noPadding {
+  .render {
+    padding: 0;
+  }
+}
+
+/* states */
+.isFullScreen {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1000;
   overflow: auto;
   margin-top: 0;
   max-width: 100%;
+  padding-top: 1.95em;
 
-  .button {
+  .actions {
     position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
 
-  .render {
+  .nav {
+    border-bottom: none;
+  }
+
+  .render,
+  .code {
     border: none;
   }
-}
 
-.nav {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: #eee;
-  padding-right: 7em;
-}
-
-.actions {
-  text-align: right;
-}
-
-.button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid #eee;
-  background-color: #eee;
-  color: blue;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 1em;
-
-  &:hover,
-  &:focus {
-    background-color: blue;
-    color: white;
+  .expandIcon {
+    display: none;
   }
-}
 
-.field {
-  background-color: #eee;
-  padding: 0.5em 0 0.8em 0.8em;
-}
-
-.label {
-  font-size: 1rem;
-  font-weight: bold;
-  padding-right: 1em;
-}
-
-.selectWrapper {
-  position: relative;
-  margin-top: 0.25em;
-
-  &::after {
-    content: '\0020';
-    position: absolute;
-    top: 50%;
-    right: 0.6em;
-    width: 0;
-    height: 0;
-    margin-top: -0.1em;
-    border-style: solid;
-    border-width: 0.3em 0.3em 0 0.3em;
-    border-color: blue transparent transparent transparent;
+  .collapseIcon {
+    display: inline-block;
   }
-}
-
-.select {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 0.5em;
-  font-size: 1rem;
-  width: 100%;
-  border: 1px solid blue;
-  border-radius: 0.4em;
-  padding-right: 3em;
-}
-
-.render  {
-  border: 1px solid #eee;
 }

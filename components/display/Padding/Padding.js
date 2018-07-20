@@ -1,11 +1,14 @@
 import { joinClass } from '@lib/component-helpers'
 import css from './Padding.css'
 
-export default ({
+const Padding = ({
   children,
-  size = 'medium'
+  size = 'medium',
+  ...props
  }) => (
-  <div className={joinClass(css.root, css[size])}>
+  <div className={joinClass(css.root, css[size])} {...props}>
     {children}
   </div>
 )
+
+export default Padding

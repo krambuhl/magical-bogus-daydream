@@ -3,21 +3,21 @@
 }
 
 .extra-small {
-  max-width: 32em;
+  max-width: 20em;
 }
 
 .small {
-  max-width: 40em;
+  max-width: 32em;  /* +12 */
 }
 
 .medium {
-  max-width: 52em
+  max-width: 45em;  /* +13 (+1) */
 }
 
 .large {
-  max-width: 64em;
+  max-width: 60em; /* +15 (+2) */
 }
 
 .extra-large {
-  max-width: 80em;
+  max-width: 78em; /* +18 (+3) */
 }

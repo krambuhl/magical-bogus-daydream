@@ -15,6 +15,7 @@
           "@static": "./static"
         }
       }
-    ]
+    ],
+    "add-react-displayname"
   ]
 }

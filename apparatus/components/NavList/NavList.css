@@ -36,10 +36,6 @@
 }
 
 .content {
-  transition: 0.3s ease;
-  transition-property: opacity;
-  opacity: 0;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -51,6 +47,9 @@
   padding: 4em 2em;
   text-align: center;
   overflow: auto;
+  transition: 0.3s ease;
+  transition-property: opacity;
+  opacity: 0;
 }
 
 .list {

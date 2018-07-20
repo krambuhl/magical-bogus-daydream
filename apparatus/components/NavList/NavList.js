@@ -23,7 +23,7 @@ class NavList extends React.Component {
       <nav ref={this.$el} className={joinClass(css.root, isExpanded && css.expanded)}>
         <button
           className={css.toggle}
-          onClick={ev => this.toggle()}
+          onClick={() => this.toggle()}
         >
           Menu
         </button>
@@ -31,7 +31,7 @@ class NavList extends React.Component {
         <div className={css.content}>
           <button
             className={css.close}
-            onClick={ev => this.toggle(false)}
+            onClick={() => this.toggle(false)}
           >
             Close
           </button>
@@ -43,7 +43,7 @@ class NavList extends React.Component {
                   <Link href={`?selected=${key}`}>
                     <a
                       className={css.link}
-                      onClick={ev => this.toggle(false)}
+                      onClick={() => this.toggle(false)}
                     >
                       { capitalize(key).split('/').join(' / ') }
                     </a>

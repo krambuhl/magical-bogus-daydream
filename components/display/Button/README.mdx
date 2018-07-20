@@ -7,9 +7,26 @@ Do reprehenderit Lorem ullamco ex. Incididunt velit minim irure aliquip. Reprehe
 
 ## Example
 
+<Specimen
+  options={{
+    type: ['primary', 'secondary', 'positive', 'negative'],
+    children: 'Do you want to click this button?',
+    disabled: false
+  }}
+>
+  {
+    ({ type, disabled, children }) =>
+      <Button type={type} disabled={disabled}>
+        {children}
+      </Button>
+  }
+</Specimen>
+
+## All Buttons
+
 <Specimen>
-  <Button type="primary">Button Primary</Button><br />
-  <Button type="secondary">Button Secondary</Button><br />
-  <Button type="positive">Button Positive</Button><br />
+  <Button type="primary">Button Primary</Button>
+  <Button type="secondary">Button Secondary</Button>
+  <Button type="positive">Button Positive</Button>
   <Button type="negative">Button Negative</Button>
 </Specimen>

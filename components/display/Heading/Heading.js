@@ -1,11 +1,14 @@
 import { joinClass } from '@lib/component-helpers'
 import css from './Heading.css'
 
-export default ({
+const Heading = ({
   level: Tag = 'h3',
-  children
+  children,
+  ...props
  }) => (
-  <Tag className={joinClass(css.root, css[Tag])}>
+  <Tag className={joinClass(css.root, css[Tag])} {...props}>
     {children}
   </Tag>
 )
+
+export default Heading

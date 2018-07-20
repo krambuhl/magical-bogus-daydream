@@ -1,9 +1,14 @@
 @import 'reset-css';
+@import './highlight-theme.css';
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
   font-family: system-ui;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }

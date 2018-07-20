@@ -9,24 +9,37 @@ Do reprehenderit Lorem ullamco ex. Incididunt velit minim irure aliquip. Reprehe
 
 <Specimen
   options={{
-    level: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+    level: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+    children: 'The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.'
   }}
 >
   {
-    ({ level, text }) =>
+    ({ level, children }) =>
       <Heading level={level}>
-        The quick brown fox jumps over the lazy dog
+        {children}
       </Heading>
   }
 </Specimen>
 
 ## All Headings
 
-<Specimen>
-  <Heading level="h1">The quick brown fox jumps over the lazy dog</Heading>
-  <Heading level="h2">The quick brown fox jumps over the lazy dog</Heading>
-  <Heading level="h3">The quick brown fox jumps over the lazy dog</Heading>
-  <Heading level="h4">The quick brown fox jumps over the lazy dog</Heading>
-  <Heading level="h5">The quick brown fox jumps over the lazy dog</Heading>
-  <Heading level="h6">The quick brown fox jumps over the lazy dog</Heading>
+Veniam qui non exercitation Lorem. In occaecat dolor amet ad eiusmod est deserunt. Anim irure magna voluptate fugiat nostrud. Sint incididunt sint excepteur nostrud exercitation culpa pariatur eiusmod. Labore cupidatat culpa id veniam velit occaecat magna occaecat do ut minim veniam amet sit.
+
+<Specimen
+  options={{
+    children: 'The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.'
+  }}
+>
+  {
+    ({ children }) => (
+      <>
+        <Heading level="h1">{children}</Heading><br />
+        <Heading level="h2">{children}</Heading><br />
+        <Heading level="h3">{children}</Heading><br />
+        <Heading level="h4">{children}</Heading><br />
+        <Heading level="h5">{children}</Heading><br />
+        <Heading level="h6">{children}</Heading>
+      </>
+    )
+  }
 </Specimen>
