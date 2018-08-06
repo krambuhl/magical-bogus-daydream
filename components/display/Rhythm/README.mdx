@@ -1,0 +1,63 @@
+import { Specimen } from '@styleguide'
+import { Rhythm } from '@components/display'
+
+# Rhythm
+
+Do reprehenderit Lorem ullamco ex. Incididunt velit minim irure aliquip. Reprehenderit in laboris anim irure. Aliqua nisi nostrud laboris minim in amet voluptate officia velit. Irure excepteur dolore Lorem consequat reprehenderit eiusmod occaecat consectetur irure consectetur consectetur cupidatat. Magna dolor eiusmod sint adipisicing tempor id consequat. Ad laboris est dolor magna deserunt qui reprehenderit ullamco occaecat est.
+
+## Example
+
+<Specimen
+  options={{
+    size: ['extra-small', 'small', 'medium', 'large', 'extra-large']
+  }}
+>
+  {
+    ({ size }) =>
+      <Rhythm size={size}>
+        <div style={{ background: '#eee', padding: '0.5em', textAlign: 'center' }}>Voluptate esse do qui nisi aliqua occaecat amet culpa nulla minim sint mollit consequat laborum. Cillum magna Lorem est deserunt dolor cupidatat laborum dolore dolor.</div>
+        <div style={{ background: '#eee', padding: '0.5em', textAlign: 'center' }}>Lorem nulla qui non nulla nulla aute reprehenderit consectetur velit incididunt commodo esse. Aliqua esse esse laborum culpa nisi aliqua velit excepteur incididunt excepteur aute ut. Lorem nulla qui non nulla nulla aute reprehenderit consectetur velit incididunt commodo esse. Aliqua esse esse laborum culpa nisi aliqua velit excepteur incididunt excepteur aute ut. Lorem nulla qui non nulla nulla aute reprehenderit consectetur velit incididunt commodo esse. Aliqua esse esse laborum culpa nisi aliqua velit excepteur incididunt excepteur aute ut.</div>
+        <div style={{ background: '#eee', padding: '0.5em', textAlign: 'center' }}>In voluptate eiusmod ea irure labore cillum voluptate aliquip ipsum in.</div>
+        <div style={{ background: '#eee', padding: '0.5em', textAlign: 'center' }}>Anim id est tempor non anim nulla reprehenderit. Enim ullamco nostrud ipsum aliqua quis ullamco do. Sit adipisicing ipsum exercitation aliquip occaecat irure mollit commodo et consequat ipsum.</div>
+      </Rhythm>
+  }
+</Specimen>
+
+## All Rhythms
+
+<Specimen>
+  <Rhythm size="extra-small" style={{ border: '1px solid red' }}>
+    <div style={{ background: 'red', padding: '0.5em', textAlign: 'center' }}>Extra Small</div>
+    <div style={{ background: 'red', padding: '0.5em', textAlign: 'center' }}>Extra Small</div>
+    <div style={{ background: 'red', padding: '0.5em', textAlign: 'center' }}>Extra Small</div>
+    <div style={{ background: 'red', padding: '0.5em', textAlign: 'center' }}>Extra Small</div>
+  </Rhythm>
+  <br />
+  <Rhythm size="small" style={{ border: '1px solid orange' }}>
+    <div style={{ background: 'orange', padding: '0.5em', textAlign: 'center' }}>Small</div>
+    <div style={{ background: 'orange', padding: '0.5em', textAlign: 'center' }}>Small</div>
+    <div style={{ background: 'orange', padding: '0.5em', textAlign: 'center' }}>Small</div>
+    <div style={{ background: 'orange', padding: '0.5em', textAlign: 'center' }}>Small</div>
+  </Rhythm>
+  <br />
+  <Rhythm size="medium" style={{ border: '1px solid yellow' }}>
+    <div style={{ background: 'yellow', padding: '0.5em', textAlign: 'center' }}>Medium</div>
+    <div style={{ background: 'yellow', padding: '0.5em', textAlign: 'center' }}>Medium</div>
+    <div style={{ background: 'yellow', padding: '0.5em', textAlign: 'center' }}>Medium</div>
+    <div style={{ background: 'yellow', padding: '0.5em', textAlign: 'center' }}>Medium</div>
+  </Rhythm>
+  <br />
+  <Rhythm size="large" style={{ border: '1px solid green' }}>
+    <div style={{ background: 'green', padding: '0.5em', textAlign: 'center' }}>Large</div>
+    <div style={{ background: 'green', padding: '0.5em', textAlign: 'center' }}>Large</div>
+    <div style={{ background: 'green', padding: '0.5em', textAlign: 'center' }}>Large</div>
+    <div style={{ background: 'green', padding: '0.5em', textAlign: 'center' }}>Large</div>
+  </Rhythm>
+  <br />
+  <Rhythm size="extra-large" style={{ border: '1px solid blue' }}>
+    <div style={{ background: 'blue', padding: '0.5em', textAlign: 'center' }}>Extra Large</div>
+    <div style={{ background: 'blue', padding: '0.5em', textAlign: 'center' }}>Extra Large</div>
+    <div style={{ background: 'blue', padding: '0.5em', textAlign: 'center' }}>Extra Large</div>
+    <div style={{ background: 'blue', padding: '0.5em', textAlign: 'center' }}>Extra Large</div>
+  </Rhythm>
+</Specimen>

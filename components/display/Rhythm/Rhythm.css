@@ -1,0 +1,19 @@
+.extra-small > * + * {
+  margin-top: 0.25em;
+}
+
+.small > * + * {
+  margin-top: 0.5em;
+}
+
+.medium > * + * {
+  margin-top: 1em;
+}
+
+.large > * + * {
+  margin-top: 2em;
+}
+
+.extra-large > * + * {
+  margin-top: 4em;
+}

@@ -1,11 +1,11 @@
 import { Specimen } from '@styleguide'
-import { Button, Heading, Padding, Wrapper } from '@components/display'
+import { Button, Heading, Padding, Rhythm, Wrapper } from '@components/display'
 
 # The Whole Damn Thing
 
 Do reprehenderit Lorem ullamco ex. Incididunt velit minim irure aliquip. Reprehenderit in laboris anim irure. Aliqua nisi nostrud laboris minim in amet voluptate officia velit. Irure excepteur dolore Lorem consequat reprehenderit eiusmod occaecat consectetur irure consectetur consectetur cupidatat. Magna dolor eiusmod sint adipisicing tempor id consequat. Ad laboris est dolor magna deserunt qui reprehenderit ullamco occaecat est.
 
-This uses the [Button](?selected=display/Button), [Heading](?selected=display/Heading), [Padding](?selected=display/Padding), and [Wrapper](?selected=display/Wrapper) components.
+This uses the [Button](?selected=display/Button), [Heading](?selected=display/Heading), [Padding](?selected=display/Padding), [Rhythm](?selected=display/Rhythm), and [Wrapper](?selected=display/Wrapper) components.
 
 ## Example
 
@@ -14,6 +14,7 @@ This uses the [Button](?selected=display/Button), [Heading](?selected=display/He
     buttonType: ['primary', 'secondary', 'positive', 'negative'],
     headingLevel: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
     paddingSize: ['extra-small', 'small', 'medium', 'large', 'extra-large'],
+    rhythmSize: ['extra-small', 'small', 'medium', 'large', 'extra-large'],
     wrapperSize: ['extra-small', 'small', 'medium', 'large', 'extra-large'],
   }}
 >
@@ -22,13 +23,16 @@ This uses the [Button](?selected=display/Button), [Heading](?selected=display/He
       buttonType,
       headingLevel,
       paddingSize,
-      wrapperSize
+      rhythmSize,
+      wrapperSize,
     }) =>
       <Wrapper size={wrapperSize}>
         <Padding size={paddingSize}>
-          <Heading level={headingLevel}>Hello World</Heading>
-          <p>Anim irure fugiat reprehenderit velit sunt duis tempor laborum reprehenderit. Laboris nostrud irure laborum consequat minim ipsum ex duis adipisicing proident in quis officia labore. Aliqua ea cillum ex veniam cillum quis do cupidatat minim consequat ea ut consequat consequat. Ut amet velit proident labore anim occaecat id pariatur do consequat velit. Eiusmod dolore cupidatat esse eu exercitation et eu eu esse excepteur adipisicing aute consectetur enim. Commodo commodo aliquip sunt occaecat labore ut labore enim nostrud ad voluptate mollit ut. Amet incididunt aliqua aute ullamco sint exercitation id. Irure consequat consectetur qui laborum sunt in irure enim nostrud irure nostrud dolor et. Ad elit sunt id amet occaecat cupidatat adipisicing magna dolor Lorem labore.</p>
-          <Button type={buttonType}>Go there girlfriend!</Button>
+          <Rhythm size={rhythmSize}>
+            <Heading level={headingLevel}>Hello World</Heading>
+            <p>Anim irure fugiat reprehenderit velit sunt duis tempor laborum reprehenderit. Laboris nostrud irure laborum consequat minim ipsum ex duis adipisicing proident in quis officia labore. Aliqua ea cillum ex veniam cillum quis do cupidatat minim consequat ea ut consequat consequat. Ut amet velit proident labore anim occaecat id pariatur do consequat velit. Eiusmod dolore cupidatat esse eu exercitation et eu eu esse excepteur adipisicing aute consectetur enim. Commodo commodo aliquip sunt occaecat labore ut labore enim nostrud ad voluptate mollit ut. Amet incididunt aliqua aute ullamco sint exercitation id. Irure consequat consectetur qui laborum sunt in irure enim nostrud irure nostrud dolor et. Ad elit sunt id amet occaecat cupidatat adipisicing magna dolor Lorem labore.</p>
+            <Button type={buttonType}>Go there girlfriend!</Button>
+          </Rhythm>
         </Padding>
       </Wrapper>
   }

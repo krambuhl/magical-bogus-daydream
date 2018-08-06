@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router'
+import { NavList } from '@styleguide'
 import css from './ReadmeViewer.css'
 
 export default withRouter(
@@ -13,21 +14,16 @@ export default withRouter(
 
     return (
       <div className={css.root}>
-        <Component />
+        <Component fileList={fileList} />
       </div>
     )
   }
 )
 
-const ErrorPage = withRouter(
-  ({
-    router
-  }) => (
-    <div>
-      <h1>Oh no!</h1>
-      <p>This page is not found buddy.</p>
-      <p><em>{router.asPath}</em></p>
-    </div>
-  )
+const ErrorPage = ({ fileList }) => (
+  <div>
+    <h1>Table of Contents</h1>
+    <NavList fileList={fileList} />
+  </div>
 )
 
